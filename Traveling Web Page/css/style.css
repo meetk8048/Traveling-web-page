@@ -17,7 +17,6 @@ body {
     justify-content: space-between;
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -49,7 +48,6 @@ nav {
     font-size: 14px;
 }
 
-/* Hero content */
 .content {
     max-width: 700px;
     margin: 80px 60px;
@@ -78,6 +76,7 @@ nav {
     gap: 20px;
     max-width: 900px;
 }
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -94,14 +93,12 @@ nav {
     box-sizing: border-box;
 }
 
-
 .dis {
     font-size: 16px;
     opacity: 0.9;
     line-height: 1.4;
 }
 
-/* Explore More */
 .explore {
     font-size: 16px;
     opacity: 0.9;
@@ -115,8 +112,6 @@ nav {
     
 }
 
-
-/* Social icons */
 .social {
     display: flex;
     flex-direction: column;
