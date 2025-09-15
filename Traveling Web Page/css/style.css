@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-selector {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hero content */
+.content {
+    max-width: 700px;
+    margin: 80px 60px;
+}
+
+.content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.main-booking {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+}
+
+.booking {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    background: #f1f3f4;
+    color: #202124;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+
+.dis {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Explore More */
+.explore {
+    font-size: 16px;
+    opacity: 0.9;
+    cursor: pointer;;
+}
+
+.explore-down {
+    font-size: 16px;
+    margin-left: 5px;
+    text-decoration: none;
+    
+}
+
+
+/* Social icons */
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 40%;
+    right: 20px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
