@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/booking.css">
+</head>
+
+<body class="text-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <section
+        class="w-full max-w-lg mx-auto rounded-3xl overflow-hidden relative transition-transform duration-500 card-tilt">
+        <div class="glass-card p-8 md:p-12 z-10 flex flex-col items-center text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-2 text-white drop-shadow-lg"><i
+                    class="fa-solid fa-plane-departure mr-3 text-sky-400"></i> Book Your Adventure</h2>
+            <p class="text-lg mb-8 text-gray-300">Fill in your details to secure your spot for an unforgettable journey.
+            </p>
+
+            <form class="booking-form w-full space-y-6" onsubmit="handleFormSubmit(event)">
+                <div class="relative group">
+                    <label for="name" class="sr-only">Full Name</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-user text-gray-400"></i>
+                    </div>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 placeholder-gray-400 input-focus-glow">
+                </div>
+
+                <div class="relative group">
+                    <label for="phone" class="sr-only">Phone Number</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-phone text-gray-400"></i>
+                    </div>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 placeholder-gray-400 input-focus-glow">
+                </div>
+
+                <div class="relative group">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-envelope text-gray-400"></i>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 placeholder-gray-400 input-focus-glow">
+                </div>
+
+                <div class="relative group">
+                    <label for="destination" class="sr-only">Destination</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-map-marker-alt text-gray-400"></i>
+                    </div>
+                    <select id="destination" name="destination" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 appearance-none cursor-pointer">
+                        <option value="" class="text-black">Select a destination</option>
+                        <option value="Askja Caldera" class="text-black">Askja Caldera</option>
+                        <option value="Mossy Mountain Hillside" class="text-black">Mossy Mountain Hillside</option>
+                        <option value="Reynisfjara Black Sand Beach" class="text-black">Reynisfjara Black Sand Beach
+                        </option>
+                        <option value="Auroras" class="text-black">Auroras</option>
+                        <option value="Golden Circle" class="text-black">Golden Circle</option>
+                        <option value="Glacier Expedition" class="text-black">Glacier Expedition</option>
+                    </select>
+                </div>
+
+                <div class="relative group">
+                    <label for="date" class="sr-only">Travel Date</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-calendar-days text-gray-400"></i>
+                    </div>
+                    <input type="date" id="date" name="date" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 placeholder-gray-400 input-focus-glow">
+                </div>
+
+                <div class="relative group">
+                    <label for="people" class="sr-only">Number of People</label>
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none group-focus-within:text-sky-400 transition-colors duration-300">
+                        <i class="fa-solid fa-users text-gray-400"></i>
+                    </div>
+                    <input type="number" id="people" name="people" min="1" max="20" value="1" required
+                        class="w-full pl-10 pr-4 py-3 bg-white/10 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all duration-300 placeholder-gray-400 input-focus-glow">
+                </div>
+
+                <button type="submit"
+                    class="btn w-full px-6 py-3 font-semibold text-lg rounded-full text-white bg-gradient-to-r from-sky-500 to-indigo-500 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 transition-transform transform duration-300 hover:scale-105 btn-glow">
+                    <i class="fa-solid fa-check mr-2"></i> Confirm Booking
+                </button>
+            </form>
+
+            <div id="messageBox"
+                class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/30">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-sky-500 text-center transform scale-0 opacity-0"
+                    id="messageContent">
+                    <i class="fa-solid fa-circle-check text-green-500 text-6xl mb-4 animate-bounce"></i>
+                    <h3 class="text-2xl font-bold text-white">Booking Confirmed!</h3>
+                    <p class="mt-2 text-gray-300">Thank you for booking with us. We've received your details.</p>
+                    <button onclick="hideMessageBox()"
+                        class="mt-6 px-6 py-2 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors duration-300">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const messageBox = document.getElementById('messageBox');
+            const messageContent = document.getElementById('messageContent');
+
+            messageBox.classList.remove('hidden');
+
+            messageContent.classList.add('message-box-show');
+        }
+
+        function hideMessageBox() {
+            const messageBox = document.getElementById('messageBox');
+            const messageContent = document.getElementById('messageContent');
+
+            messageContent.classList.remove('message-box-show');
+            messageContent.classList.add('message-box-hide');
+
+            messageContent.addEventListener('animationend', () => {
+                messageBox.classList.add('hidden');
+                messageContent.classList.remove('message-box-hide');
+            }, { once: true });
+        }
+    </script>
+</body>
+
+</html>

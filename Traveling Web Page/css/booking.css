@@ -1,0 +1,72 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+ body {
+     font-family: 'Inter', sans-serif;
+     perspective: 1000px;
+     /* Simple, cool radial gradient background */
+     background: radial-gradient(circle at center, rgba(30, 41, 59, 1) 0%, rgba(17, 24, 39, 1) 100%);
+ }
+
+ .glass-card {
+     background: rgba(255, 255, 255, 0.05);
+     backdrop-filter: blur(20px);
+     -webkit-backdrop-filter: blur(20px);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+ }
+
+ .card-tilt:hover {
+     transform: scale(1.02) rotateX(2deg) rotateY(-2deg);
+ }
+
+ .input-focus-glow:focus {
+     box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.5);
+ }
+
+ .btn-glow {
+     animation: button-glow 1.5s ease-in-out infinite alternate;
+ }
+
+ @keyframes button-glow {
+     from {
+         text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #38bdf8;
+         box-shadow: 0 0 5px #38bdf8, 0 0 10px #38bdf8, 0 0 15px #38bdf8;
+     }
+
+     to {
+         text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 24px #38bdf8;
+         box-shadow: 0 0 20px #38bdf8, 0 0 30px #38bdf8, 0 0 40px #38bdf8;
+     }
+ }
+
+ .message-box-show {
+     animation: slide-in-elastic 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+ }
+
+ @keyframes slide-in-elastic {
+     0% {
+         transform: translateY(-200px) scale(0.5);
+         opacity: 0;
+     }
+
+     100% {
+         transform: translateY(0) scale(1);
+         opacity: 1;
+     }
+ }
+
+ .message-box-hide {
+     animation: slide-out-elastic 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+ }
+
+ @keyframes slide-out-elastic {
+     0% {
+         transform: translateY(0) scale(1);
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateY(-200px) scale(0.5);
+         opacity: 0;
+     }
+ }
