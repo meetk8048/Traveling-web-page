@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/icon.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +20,11 @@
         <nav>
             <div class="logo">MAXGOL</div>
             <ul class="nav-links">
-                <li><b>Home</b></li>
-                <li>Destination</li>
-                <li>Gallery</li>
-                <li>Travel Packages</li>
+                <li><a href="./index.html" class="active"><b>Home</b></a></li>
+                <li><a href="#Destinations">Destination</a></li>
+                <li><a href="#Galleries">Galleries</a></li>
+                <li><a href="#Reservation">Reservation</a></li>
+                <li><a href="./booking/about.html" target="_blank">About</a></li>
             </ul>
             <a href="#" class="lang-selector">EN <i class="fas fa-chevron-down"></i></a>
         </nav>
@@ -33,11 +35,11 @@
 
         <div class="main-booking">
             <div class="booking">
-                <a href="./booking/booking.html" class="btn" target="_blank">
-                    <span>Booking Now</span>
-                    <span class="arrow-icon">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
-                    </span>
+                <a href="./booking/booking.html" target="_blank" class="btn">
+                        <span>Booking Now</span>
+                        <span class="arrow-icon">
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </span>
                 </a>
                 <p class="dis">
                     Discover the captivating allure of Arctic wonders, from stunning landscapes<br> to vibrant culture,
@@ -50,9 +52,9 @@
         </div>
 
         <div class="social">
-            <a href="https://www.instagram.com/meet_kathiriya_904"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/meet-kathiriya-8aaa88271"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/meet_kathiriya_904" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/meet-kathiriya-8aaa88271" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube" target="_blank"></i></a>
         </div>
     </div>
 
@@ -86,7 +88,7 @@
 
     <div class="description">
         <div class="left-destination">
-            <div class="destinations-label">[Destinations]</div>
+            <div id="Destinations" class="destinations-label">[Destinations]</div>
             <h1 class="main-heading">A unique blend of adventure, culture, and natural wonders</h1>
         </div>
     
@@ -131,7 +133,7 @@
     </div>
 
     <div class="gallerie-container">
-        <div class="sidebar">
+        <div id="Galleries" class="sidebar">
             [Galleries]
         </div>
         <div class="main-content">
@@ -165,7 +167,7 @@
         <div class="reservation-container">
             <div class="header">
                 <div class="title-section">
-                    <span class="booking-label">[Reservation]</span>
+                    <span id="Reservation" class="booking-label">[Reservation]</span>
                     <h1>Secure spot for an unforgettable journey through Iceland's beauty and unique charms</h1>
                 </div>
                 <div class="gallery-nav">
@@ -192,7 +194,9 @@
                     </div>
                     <div class="price-section">
                         <span class="price">From $1,567</span>
-                        <a href="./booking/booking.html" class="booking-btn" target="_blank">Booking Now</a>
+                        <a href="./booking/booking.html" target="_blank">
+                            <button class="booking-btn">Booking Now</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -214,7 +218,9 @@
                             <img src="./img/img-12.jpg"
                                 alt="Catching the Auororas">
                             <div class="overlay">
-                                <button class="book-seat-btn">Book Seat</button>
+                                <a href="./booking/booking.html" target="_blank">
+                                    <button class="book-seat-btn">Book Seat</button>
+                                </a>
                             </div>
                         </div>
                         <div class="card-details">
@@ -232,7 +238,9 @@
                             <img src="./img/img-13.jpg"
                                 alt="Golden Circle Adventure">
                                 <div class="overlay">
-                                    <button class="book-seat-btn">Book Seat</button>
+                                    <a href="./booking/booking.html" target="_blank">
+                                        <button class="book-seat-btn">Book Seat</button>
+                                    </a>
                                 </div>
                         </div>
                         <div class="card-details">
@@ -248,7 +256,9 @@
                             <img src="./img/img-14.jpg"
                                 alt="Glacier Expedition">
                                 <div class="overlay">
-                                    <button class="book-seat-btn">Book Seat</button>
+                                    <a href="./booking/booking.html" target="_blank">
+                                        <button class="book-seat-btn">Book Seat</button>
+                                    </a>
                                 </div>
                         </div>
                         <div class="card-details">
@@ -265,7 +275,9 @@
                             <img src="./img/img-15.jpg"
                                 alt="Glacier Expedition">
                             <div class="overlay">
-                                <button class="book-seat-btn">Book Seat</button>
+                                <a href="./booking/booking.html" target="_blank">
+                                    <button class="book-seat-btn">Book Seat</button>
+                                </a>
                             </div>
                         </div>
                         <div class="card-details">
@@ -288,7 +300,9 @@
                     <h2>Find the perfect trip for you and discover<br>extraordinary adventures with us!</h2>
                     <p>Embark on a journey of exploration and excitement as we guide you towards unforgettable experiences
                         across the globe.</p>
-                    <a href="#" class="get-started-btn">Get Started &nbsp;↗</a>
+                    <a href="#">
+                        <button  class="get-started-btn">Get Started &nbsp;↗</button>
+                    </a>
                 </div>
     
                 <div class="footer-bottom">
@@ -302,9 +316,9 @@
                         <h4>Navigations</h4>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Destinations</a></li>
-                            <li><a href="#">Travel Packages</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#Destinations">Destinations</a></li>
+                            <li><a href="#Travel Packages">Travel Packages</a></li>
+                            <li><a href="#Gallery">Gallery</a></li>
                         </ul>
                     </div>
     
@@ -322,7 +336,7 @@
                         <p>travel@maxgol.in</p>
                         <p>+91 83204***38</p>
                         <p>Phoenix Tower,Vesu Main Road</p>
-                        <p>Chorasi 394510</p>
+                        <p>Surat Chorasi 394510</p>
                     </div>
                 </div>
             </div>
